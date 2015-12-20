@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MovieNow</string>
+    <string name="radius">Range</string>
+
+    <!-- Movie View -->
+    <string name="cast">C A S T</string>
+    <string name="director">D I R E C T O R</string>
+    <string name="movie_info">M O V I E I N F O</string>
+    <string name="showtime">S H O W T I M E: </string>
+    <string name="theater">T H E A T E R</string>
+
+    <!-- Menu Values -->
+    <string name="search_hint">Location</string>
+    <string name="change_radius">Change Radius</string>
+    <string name="my_location">My Location</string>
+
+    <string name="calendar_week">This Week</string>
+    <string name="rating_sort">Rating Sort</string>
+    <string name="send">Send</string>
+
+    <string name="send_message">Send Message</string>
+    <string name="buy_tickets">Buy Tickets</string>
+    <string name="add_to_calendar">Calendar Event</string>
+    <string name="critic_reviews">Get Critic Reviews</string>
+    <string name="full_cast">Get Full Cast</string>
+
+    <string name="title_activity_message_view">Send Message</string>
+    <string name="title_activity_movie_view">Movies</string>
+    <string name="title_activity_instructions">About this App</string>
+    <string name="title_more_info">More Details</string>
+    <string name="title_activity_web_view">The Web</string>
+
+    <string name="action_settings">Settings</string>
+
+</resources>

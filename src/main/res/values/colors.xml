@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="background_yellow" type="color">#FFECB3</item>
+    <item name="red" type="color">#d80731</item>
+    <item name="navy" type="color">#021941</item>
+    <item name="light_grey" type="color">#727272</item>
+    <item name="off_white" type="color">#fff8f9</item>
+    <item name="black" type="color">#000000</item>
+
+</resources> 

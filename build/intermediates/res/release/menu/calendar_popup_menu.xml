@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/day1"
+        android:title="day1"
+        android:icon="@drawable/checkbox_unchecked"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/day2"
+        android:title="day2"
+        android:icon="@drawable/checkbox_unchecked"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/day3"
+        android:title="day3"
+        android:icon="@drawable/checkbox_unchecked"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/day4"
+        android:title="day4"
+        android:icon="@drawable/checkbox_unchecked"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/day5"
+        android:title="day5"
+        android:icon="@drawable/checkbox_unchecked"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/day6"
+        android:title="day6"
+        android:icon="@drawable/checkbox_unchecked"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/day7"
+        android:title="day7"
+        android:icon="@drawable/checkbox_unchecked"
+        app:showAsAction="ifRoom"/>
+
+</menu>  <!-- From: file:/Users/geethasrini/AndroidstudioProjects/MovieApp/app/src/main/res/menu/calendar_popup_menu.xml -->

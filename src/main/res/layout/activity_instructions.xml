@@ -1,0 +1,194 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_yellow"
+        android:padding="8dp" >
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor= "@color/red"
+            android:textStyle="bold"/>
+
+        <!-- View Description -->
+        <TextView
+            android:id="@+id/view_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="15dp"
+            android:textColor= "@color/navy"/>
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:background="@drawable/search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/view_description" />
+
+        <TextView
+            android:id="@+id/search_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/search_icon"
+            android:layout_below="@id/view_description"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor= "@color/navy" />
+
+        <ImageView
+            android:id="@+id/current_loc_icon"
+            android:background="@drawable/my_location"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/search_description" />
+
+        <TextView
+            android:id="@+id/current_loc_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_description"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/current_loc_icon"
+            android:textColor= "@color/navy"/>
+
+        <ImageView
+            android:id="@+id/calendar_icon"
+            android:background="@drawable/calendar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/current_loc_description" />
+
+        <TextView
+            android:id="@+id/calendar_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/current_loc_description"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/calendar_icon"
+            android:textColor= "@color/navy"/>
+
+        <ImageView
+            android:id="@+id/rating_icon"
+            android:background="@drawable/critic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/calendar_description" />
+
+        <TextView
+            android:id="@+id/rating_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calendar_description"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/rating_icon"
+            android:textColor= "@color/navy"/>
+
+        <!-- View Description -->
+        <TextView
+            android:id="@+id/view_two_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating_description"
+            android:layout_marginTop="10dp"
+            android:textColor= "@color/navy"/>
+
+        <ImageView
+            android:id="@+id/calendar_event_icon"
+            android:background="@drawable/add_to_calendar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/view_two_description" />
+
+        <TextView
+            android:id="@+id/calendar_event_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/calendar_event_icon"
+            android:layout_below="@id/view_two_description"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textColor= "@color/navy" />
+
+        <ImageView
+            android:id="@+id/text_icon"
+            android:background="@drawable/text"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/calendar_event_description" />
+
+        <TextView
+            android:id="@+id/text_icon_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calendar_event_description"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/text_icon"
+            android:textColor= "@color/navy"/>
+
+        <ImageView
+            android:id="@+id/ticket_icon"
+            android:background="@drawable/ticket"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/text_icon_description" />
+
+        <TextView
+            android:id="@+id/ticket_icon_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_icon_description"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ticket_icon"
+            android:textColor= "@color/navy"/>
+
+        <TextView
+            android:id="@+id/api_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ticket_icon_description"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor= "@color/navy"/>
+
+        <Button
+            android:id="@+id/read_button"
+            android:text="I understand how to use this app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/api_used"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor= "@color/navy"/>
+
+    </RelativeLayout>
+</ScrollView>

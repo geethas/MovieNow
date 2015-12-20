@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/search_bar"
+        android:title="@string/search_hint"
+        android:iconifiedByDefault="true"
+        android:icon="@drawable/search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
+
+    <item android:id="@+id/my_location"
+        android:title="@string/my_location"
+        android:icon="@drawable/my_location"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/calendar_week"
+        android:title="@string/calendar_week"
+        android:icon="@drawable/calendar"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/rating_sort"
+        android:title="@string/rating_sort"
+        android:icon="@drawable/critic"
+        app:showAsAction="always"/>
+
+</menu><!-- From: file:/Users/geethasrini/AndroidstudioProjects/MovieApp/app/src/main/res/menu/movie_list_menu.xml -->

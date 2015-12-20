@@ -1,0 +1,335 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:background="@color/background_yellow"
+        tools:context="view.activity.MovieDetailView">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/custom_toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"/>
+
+        <View
+            android:id="@+id/toolbar_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/custom_toolbar"
+            android:background="@drawable/shadow" />
+
+        <!-- Movie Image -->
+        <!--<ImageView-->
+            <!--android:id="@+id/thumbnail"-->
+            <!--android:layout_width="105dp"-->
+            <!--android:layout_height="105dp"-->
+            <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+            <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_below="@id/custom_toolbar"/>-->
+
+        <!-- Movie Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textSize="20sp"
+            android:layout_below="@id/custom_toolbar"
+            android:layout_marginTop="15dp"
+            android:textColor= "@color/red"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rotten_tomato_copyright"
+            android:text="Rotten Tomatoes® Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="15dp"
+            android:textColor= "@color/black"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+        <!-- Critic Image -->
+        <TextView
+            android:id="@+id/critic_image"
+            android:text="Critic: "
+            android:textColor= "@color/black"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rotten_tomato_copyright" />
+
+        <!-- Critic Rating -->
+        <TextView
+            android:id="@+id/critic_rating"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/critic_image"
+            android:layout_below="@id/rotten_tomato_copyright"
+            android:textColor= "@color/navy"/>
+
+        <!-- Audience Image -->
+        <TextView
+            android:id="@+id/audience_image"
+            android:text="Audience: "
+            android:textColor= "@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/critic_rating"
+            android:layout_below="@id/rotten_tomato_copyright" />
+
+        <!-- Audience Rating -->
+        <TextView
+            android:id="@+id/audience_rating"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/audience_image"
+            android:layout_below="@id/rotten_tomato_copyright"
+            android:textColor= "@color/navy"/>
+
+        <!-- Movie Type, Runtime and Language -->
+        <TextView
+            android:id="@+id/typeAndRunTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/critic_image"
+            android:layout_marginLeft="15dp"
+            android:textColor= "@color/navy"/>
+
+        <!-- Genre -->
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/typeAndRunTime"
+            android:layout_marginLeft="15dp"
+            android:textColor= "@color/navy"/>
+
+        <!--<TextView-->
+            <!--android:id="@+id/copyright"-->
+            <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+            <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+            <!--android:textSize="8dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/thumbnail"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:textColor= "@color/navy" />-->
+
+        <!-- Theater -->
+        <TextView
+            android:id="@+id/theater"
+            android:text="@string/theater"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/genre"
+            android:layout_marginTop="30dp"
+            android:textColor= "@color/red" />
+
+        <Spinner
+            android:id="@+id/theater_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@id/theater"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Showtime -->
+        <TextView
+            android:id="@+id/showtime"
+            android:text="@string/showtime"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/theater_spinner"
+            android:layout_marginTop="8dp"
+            android:textColor= "@color/red" />
+
+        <TextView
+            android:id="@+id/movie_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/showtime"
+            android:layout_below="@id/theater_spinner"
+            android:layout_marginTop="8dp"
+            android:textColor= "@color/navy" />
+
+        <Spinner
+            android:id="@+id/movie_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@id/showtime"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Movie Info (Synopsis, film ratings etc) -->
+        <TextView
+            android:id="@+id/info"
+            android:text="@string/movie_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@id/movie_spinner"
+            android:layout_marginTop="15dp"
+            android:textColor= "@color/red"/>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/movie_info_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardUseCompatPadding="true"
+            android:layout_below="@id/info">
+            <LinearLayout
+                android:id="@+id/info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor= "@color/navy"
+                android:lineSpacingExtra="3dp">
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <!-- Cast -->
+        <TextView
+            android:id="@+id/cast"
+            android:text="@string/cast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_info_card_view"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="15dp"
+            android:textColor= "@color/red"/>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cast_info_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardUseCompatPadding="true"
+            android:layout_below="@id/cast">
+            <LinearLayout
+                android:id="@+id/cast_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor= "@color/navy"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp">
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/full_cast_button"
+            android:text="@string/full_cast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_below="@id/cast_info_card_view"
+            android:textColor= "@color/navy"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="left|center_vertical"
+            android:textSize="14dp"
+            android:background="@drawable/list_rounded"/>
+
+        <!-- Directors -->
+        <TextView
+            android:id="@+id/director"
+            android:text="@string/director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@id/full_cast_button"
+            android:layout_marginTop="15dp"
+            android:textColor= "@color/red"/>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/director_info_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardUseCompatPadding="true"
+            android:layout_below="@id/director">
+            <LinearLayout
+                android:id="@+id/director_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textColor= "@color/navy"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp">
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/critic_button"
+            android:text="@string/critic_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_below="@id/director_info_card_view"
+            android:textColor= "@color/navy"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="left|center_vertical"
+            android:textSize="14dp"
+            android:background="@drawable/list_rounded"/>
+
+ </RelativeLayout>
+</ScrollView>

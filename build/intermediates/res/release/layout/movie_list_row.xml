@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="2dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        android:padding="8dp" >
+
+        <!-- Thumbnail Image -->
+        <!--<ImageView-->
+            <!--android:id="@+id/thumbnail"-->
+            <!--android:layout_width="75dp"-->
+            <!--android:layout_height="110dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:adjustViewBounds="true"/>-->
+
+        <!-- Movie Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor= "@color/red"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/rotten_tomato_copyright"
+            android:text="Rotten Tomatoes® Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:textColor= "@color/black"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+        <!-- Critic Image -->
+        <TextView
+            android:id="@+id/critic_image"
+            android:text="Critic: "
+            android:textColor= "@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rotten_tomato_copyright" />
+
+        <!-- Critic Rating -->
+        <TextView
+            android:id="@+id/critic_rating"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/critic_image"
+            android:layout_below="@id/rotten_tomato_copyright"
+            android:textColor= "@color/navy"/>
+
+        <!-- Audience Image -->
+        <TextView
+            android:id="@+id/audience_image"
+            android:text="Audience: "
+            android:textColor= "@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/critic_rating"
+            android:layout_below="@id/rotten_tomato_copyright" />
+
+        <!-- Audience Rating -->
+         <TextView
+            android:id="@+id/audience_rating"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/audience_image"
+            android:layout_below="@id/rotten_tomato_copyright"
+            android:textColor= "@color/navy"/>
+
+        <!-- Movie Type and Runtime -->
+        <TextView
+            android:id="@+id/typeAndRunTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/critic_image"
+            android:textColor= "@color/navy"/>
+
+        <!-- Arrow -->
+        <ImageView
+            android:id="@+id/arrow"
+            android:background="@drawable/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/critic_image"
+            android:layout_alignParentRight="true"/>
+
+        <!-- Top Cast -->
+        <TextView
+            android:id="@+id/cast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/typeAndRunTime"
+            android:singleLine="true"
+            android:textColor= "@color/navy"/>
+
+        <!--<TextView-->
+            <!--android:id="@+id/copyright"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/thumbnail"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:textSize="8dp"-->
+            <!--android:textColor= "@color/navy"/>-->
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView><!-- From: file:/Users/geethasrini/AndroidstudioProjects/MovieApp/app/src/main/res/layout/movie_list_row.xml -->

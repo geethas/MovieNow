@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white"
+    android:orientation="vertical"
+    tools:context="view.activity.MovieView">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/custom_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <View
+        android:id="@+id/toolbar_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/custom_toolbar"
+        android:background="@drawable/shadow" />
+
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <!-- Display list of movies -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/movie_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_yellow"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <!-- Display Seek bar -->
+    <RelativeLayout
+        android:id = "@+id/radius_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:visibility="visible"
+        android:gravity="bottom"
+        android:background="@color/background_yellow">
+
+        <TextView
+            android:id="@+id/radius_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/radius_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dsb_allowTrackClickToDrag="false"
+            android:maxHeight="10dp"
+            android:progress="5"
+            android:secondaryProgress="0"
+            android:layout_toLeftOf="@+id/radius_num"
+            app:dsb_progressColor="@color/red"
+            app:dsb_indicatorColor="@color/red"
+            app:dsb_indicatorTextAppearance="@color/off_white"
+            app:dsb_max="50" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+<!-- From: file:/Users/geethasrini/AndroidstudioProjects/MovieApp/app/src/main/res/layout/activity_movie.xml -->
